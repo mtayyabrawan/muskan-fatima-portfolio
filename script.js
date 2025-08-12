@@ -5,22 +5,26 @@ window.addEventListener("chainlit-call-fn", (e) => {
     callback("You sent: " + args.msg);
 });
 
-
-window.mountChainlitWidget({
+try {
+  window.mountChainlitWidget({
     // URL of the Chainlit server
     chainlitServer: "https://muskan-fatima-agent.up.railway.app",
     // theme: "light" | "dark",
-    
+
     // Custom styling to apply to the widget button
     button: {
-        // ID of the container element to mount the button to
-        containerId: "copilot-chatbot",
-        // URL of the image to use as the button icon
-        imageUrl: "/assets/copilot-icon.png",
-        // The tailwind classname to apply to the button
-        className: "px-0 py-0 [&_svg]:size-1 bg-transparent hover:bg-transparent",
+      // ID of the container element to mount the button to
+      containerId: "copilot-chatbot",
+      // URL of the image to use as the button icon
+      imageUrl: "/assets/copilot-icon.png",
+      // The tailwind classname to apply to the button
+      className: "px-0 py-0 [&_svg]:size-1 bg-transparent hover:bg-transparent"
     }
-});
+  });
+} catch (error) {
+  console.log("Error occured while mounting Chainlit widget", error);
+}
+
 
 
 
