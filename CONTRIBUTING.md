@@ -36,4 +36,3 @@ Javascript
 Please be respectful and kind in all interactions. This project aims to maintain a welcoming community for everyone.
 
 Need help? Just open an issue and let's chat!
-

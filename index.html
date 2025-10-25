@@ -1,301 +1,475 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Muskan Fatima's Portfolio</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="shortcut icon" href="/muskan_img.png" type="image/png" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muskan Fatima's Portfolio</title>
-    
-    <!-- Assets -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="shortcut icon" href="assets/muskan_img.png" type="image/x-icon">
-    
-    <!-- Copilot -->
-    <script src="https://muskan-fatima-agent.up.railway.app/copilot/index.js"></script>
-    <link rel="stylesheet" href="index.css">
-</head>
+        <!-- Copilot -->
+        <script src="https://muskan-fatima-agent.up.railway.app/copilot/index.js"></script>
 
-<body>
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+        <link rel="stylesheet" href="/src/index.css" />
+    </head>
 
-    <header>
-        <nav id="navbar">
-            <div class="logo" data-aos="fade-right" data-aos-duration="1000">
-                <h3>Muskan's Portfolio</h3>
-            </div>
-            <div class="nav-right">
-                <ul class="nav-links" data-aos="fade-left" data-aos-duration="1000">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <body>
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTop" class="scroll-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 
-                <!-- Theme Toggle Button -->
-                <div class="theme-toggle">
-                    <input type="checkbox" id="theme-switch" class="theme-switch">
-                    <label for="theme-switch" class="theme-switch-label">
-                        <i class="fas fa-sun"></i>
-                        <i class="fas fa-moon"></i>
-                        <div class="ball"></div>
-                    </label>
+        <header>
+            <nav id="navbar">
+                <div
+                    class="logo"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                >
+                    <h3>Muskan's Portfolio</h3>
                 </div>
+                <div class="nav-right">
+                    <ul
+                        class="nav-links"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                    >
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
 
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+                    <!-- Theme Toggle Button -->
+                    <div class="theme-toggle">
+                        <input
+                            type="checkbox"
+                            id="theme-switch"
+                            class="theme-switch"
+                        />
+                        <label for="theme-switch" class="theme-switch-label">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main>
-        <section id="home">
-            <div class="profile-container">
-                <img src="assets/muskan_img.png" alt="Profile Picture" class="profile-pic" data-aos="zoom-in"
-                    data-aos-duration="1500">
-                <div class="intro-text" data-aos="fade-up" data-aos-duration="1500">
-                    <h1 id="typing-text">Hello, my name is Muskan</h1>
-                    <p class="bio-text">
-                        My name is Muskan, and I am currently pursuing a Bachelor's in Science (BSc).
-                        <br>I am also a student of the Governor's Initiative for Artificial Intelligence and Cloud
-                        (GIAIC),
-                        <br>organized by the Governor of Sindh, Pakistan, at the Governor House.
-                        <br>I am specializing in Cloud Generative AI and the Metaverse.
+        <main>
+            <section id="home">
+                <div class="profile-container">
+                    <img
+                        src="/muskan_img.png"
+                        alt="Profile Picture"
+                        class="profile-pic"
+                        data-aos="zoom-in"
+                        data-aos-duration="1500"
+                    />
+                    <div
+                        class="intro-text"
+                        data-aos="fade-up"
+                        data-aos-duration="1500"
+                    >
+                        <h1 id="typing-text">Hello, my name is Muskan</h1>
+                        <p class="bio-text">
+                            My name is Muskan, and I am currently pursuing a
+                            Bachelor's in Science (BSc).
+                            <br />I am also a student of the Governor's
+                            Initiative for Artificial Intelligence and Cloud
+                            (GIAIC), <br />organized by the Governor of Sindh,
+                            Pakistan, at the Governor House. <br />I am
+                            specializing in Cloud Generative AI and the
+                            Metaverse.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"
+                                ><i class="fab fa-github"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fab fa-linkedin"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fab fa-twitter"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fas fa-envelope"></i
+                            ></a>
+                        </div>
+                        <a href="#contact" class="cta-button">Get In Touch</a>
+                        &nbsp;
+                        <a
+                            href="/muskan_resume.pdf"
+                            class="cta-button"
+                            download="Muskan Fatima's Resume"
+                            >Download Resume</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div
+                    class="section-container"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>
+                                Hello! My name is Muskan, and I'm currently
+                                pursuing a Bachelor's in Science (BSc), while
+                                actively participating in the Governor's
+                                Initiative for Artificial Intelligence and Cloud
+                                (GIAIC), led by the Governor of Sindh, Pakistan.
+                            </p>
+                            <p>
+                                I am deeply passionate about Cloud Generative AI
+                                and the evolving world of the Metaverse,
+                                constantly exploring the intersection of these
+                                groundbreaking technologies. Through my learning
+                                journey, I am continuously honing my knowledge
+                                and expanding my expertise in areas such as web
+                                development, artificial intelligence, and the
+                                transformative potential of cloud technologies.
+                            </p>
+                            <p>
+                                As I move forward, my goal is to leverage these
+                                skills to build impactful projects and
+                                contribute to the tech landscape.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <div
+                    class="section-container"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
+                    <h2 class="section-title">My Skills</h2>
+                    <div class="skills-container">
+                        <div class="skill-category">
+                            <h3>Web Development</h3>
+                            <div class="skill">
+                                <span>HTML</span>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 90%"
+                                        data-percent="90%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>CSS</span>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 85%"
+                                        data-percent="85%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>JavaScript</span>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 75%"
+                                        data-percent="75%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Tailwind CSS</span>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 80%"
+                                        data-percent="80%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>AI & Cloud</h3>
+                            <div class="skill">
+                                <span>Cloud Computing</span>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 70%"
+                                        data-percent="70%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Generative AI</span>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 65%"
+                                        data-percent="65%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <span>Metaverse</span>
+                                <div class="skill-bar">
+                                    <div
+                                        class="skill-progress"
+                                        style="width: 60%"
+                                        data-percent="60%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <div
+                    class="section-container"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
+                    <h2 class="section-title">My Projects</h2>
+                    <div class="projects-grid">
+                        <div
+                            class="project-card"
+                            data-aos="flip-left"
+                            data-aos-duration="1500"
+                        >
+                            <div class="project-content">
+                                <h3>Typing Speed Checker (CLI)</h3>
+                                <p>
+                                    Command-line application that allows users
+                                    to test and improve their typing speed and
+                                    also give the CLI based certificate.
+                                </p>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/muskan-fatim/typing_speed.git"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        <i class="fab fa-github"></i> View on
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card"
+                            data-aos="flip-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                        >
+                            <div class="project-content">
+                                <h3>Word Counter CLI Application</h3>
+                                <p>
+                                    A command-line interface tool that counts
+                                    words, providing users with a simple way to
+                                    analyze text.
+                                </p>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/muskan-fatim/word_counter.git"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        <i class="fab fa-github"></i> View on
+                                        GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card"
+                            data-aos="flip-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="200"
+                        >
+                            <div class="project-content">
+                                <h3>Snake Water Gun Game</h3>
+                                <p>
+                                    A fun and interactive game that lets users
+                                    play the classic snake, water, and gun game
+                                    online.
+                                </p>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/muskan-fatim/Fisrt-web-game.git"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        <i class="fab fa-github"></i> View on
+                                        GitHub
+                                    </a>
+                                    <a
+                                        href="https://snake-water-gun-game-three.vercel.app/"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-card"
+                            data-aos="flip-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="300"
+                        >
+                            <div class="project-content">
+                                <h3>Resume Builder</h3>
+                                <p>
+                                    A web application that allows users to
+                                    create, edit, and download resumes with a
+                                    simple user interface.
+                                </p>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/muskan-fatim/Resum-genreater.git"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        <i class="fab fa-github"></i> View on
+                                        GitHub
+                                    </a>
+                                    <a
+                                        href="https://resum-genreater.vercel.app/"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div
+                    class="section-container"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                >
+                    <h2 class="section-title">Contact Me</h2>
+                    <p class="contact-intro">
+                        I'm currently looking for new opportunities, my inbox is
+                        always open. Whether you have a question or just want to
+                        say hi, I'll try my best to get back to you!
                     </p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <a href="#contact" class="cta-button">Get In Touch</a> &nbsp;
-                    <a href="assets/muskan_resume.pdf" class="cta-button" download="Muskan Fatima's Resume">Download
-                        Resume</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <div class="section-container" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            Hello! My name is Muskan, and I'm currently pursuing a Bachelor's in Science (BSc),
-                            while actively participating in the Governor's Initiative for Artificial Intelligence and
-                            Cloud (GIAIC),
-                            led by the Governor of Sindh, Pakistan.
-                        </p>
-                        <p>
-                            I am deeply passionate about Cloud Generative AI and the evolving world of the Metaverse,
-                            constantly exploring the intersection of these groundbreaking technologies.
-                            Through my learning journey, I am continuously honing my knowledge and expanding my
-                            expertise in areas such as web development,
-                            artificial intelligence, and the transformative potential of cloud technologies.
-                        </p>
-                        <p>
-                            As I move forward, my goal is to leverage these skills to build impactful projects and
-                            contribute to the tech landscape.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="section-container" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>Web Development</h3>
-                        <div class="skill">
-                            <span>HTML</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;" data-percent="90%"></div>
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                />
+                                <span
+                                    class="error-message"
+                                    id="name-error"
+                                ></span>
                             </div>
-                        </div>
-                        <div class="skill">
-                            <span>CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;" data-percent="85%"></div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                />
+                                <span
+                                    class="error-message"
+                                    id="email-error"
+                                ></span>
                             </div>
-                        </div>
-                        <div class="skill">
-                            <span>JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%;" data-percent="75%"></div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    required
+                                ></textarea>
+                                <span
+                                    class="error-message"
+                                    id="message-error"
+                                ></span>
                             </div>
-                        </div>
-                        <div class="skill">
-                            <span>Tailwind CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;" data-percent="80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>AI & Cloud</h3>
-                        <div class="skill">
-                            <span>Cloud Computing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%;" data-percent="70%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Generative AI</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 65%;" data-percent="65%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Metaverse</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 60%;" data-percent="60%"></div>
-                            </div>
-                        </div>
+                            <button type="submit" class="submit-button">
+                                <span class="button-text">Send Message</span>
+                                <span class="button-icon"
+                                    ><i class="fas fa-paper-plane"></i
+                                ></span>
+                            </button>
+                        </form>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
-        <section id="projects">
-            <div class="section-container" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="section-title">My Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card" data-aos="flip-left" data-aos-duration="1500">
-                        <div class="project-content">
-                            <h3>Typing Speed Checker (CLI)</h3>
-                            <p>Command-line application that allows users to test and improve their typing speed and
-                                also give the CLI based certificate.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/muskan-fatim/typing_speed.git" target="_blank"
-                                    class="project-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="100">
-                        <div class="project-content">
-                            <h3>Word Counter CLI Application</h3>
-                            <p>A command-line interface tool that counts words, providing users with a simple way to
-                                analyze text.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/muskan-fatim/word_counter.git" target="_blank"
-                                    class="project-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="200">
-                        <div class="project-content">
-                            <h3>Snake Water Gun Game</h3>
-                            <p>A fun and interactive game that lets users play the classic snake, water, and gun game
-                                online.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/muskan-fatim/Fisrt-web-game.git" target="_blank"
-                                    class="project-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                                <a href="https://snake-water-gun-game-three.vercel.app/" target="_blank"
-                                    class="project-link">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="300">
-                        <div class="project-content">
-                            <h3>Resume Builder</h3>
-                            <p>A web application that allows users to create, edit, and download resumes with a simple
-                                user interface.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/muskan-fatim/Resum-genreater.git" target="_blank"
-                                    class="project-link">
-                                    <i class="fab fa-github"></i> View on GitHub
-                                </a>
-                                <a href="https://resum-genreater.vercel.app/" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i> Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Muskan's Portfolio</h3>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"
+                        ><i class="fab fa-github"></i
+                    ></a>
+                    <a href="#" class="social-icon"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+                    <a href="#" class="social-icon"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" class="social-icon"
+                        ><i class="fas fa-envelope"></i
+                    ></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Muskan. All rights reserved.</p>
                 </div>
             </div>
-        </section>
+        </footer>
 
-        <section id="contact">
-            <div class="section-container" data-aos="fade-up" data-aos-duration="1500">
-                <h2 class="section-title">Contact Me</h2>
-                <p class="contact-intro">
-                    I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or
-                    just want to say hi, I'll try my best to get back to you!
-                </p>
-                <div class="contact-form-container">
-                    <form id="contactForm" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="error-message" id="name-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="error-message" id="email-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <span class="error-message" id="message-error"></span>
-                        </div>
-                        <button type="submit" class="submit-button">
-                            <span class="button-text">Send Message</span>
-                            <span class="button-icon"><i class="fas fa-paper-plane"></i></span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h3>Muskan's Portfolio</h3>
-            </div>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <div class="footer-social">
-                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 Muskan. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-</body>
-
+        <script type="module" src="/src/main.js"></script>
+    </body>
 </html>

@@ -1,4 +1,4 @@
-// Copilot
+import AOS from "aos";
 
 window.addEventListener("chainlit-call-fn", (e) => {
     const { name, args, callback } = e.detail;
@@ -6,62 +6,60 @@ window.addEventListener("chainlit-call-fn", (e) => {
 });
 
 try {
-  window.mountChainlitWidget({
-    // URL of the Chainlit server
-    chainlitServer: "https://muskan-fatima-agent.up.railway.app",
-    // theme: "light" | "dark",
+    window.mountChainlitWidget({
+        // URL of the Chainlit server
+        chainlitServer: "https://muskan-fatima-agent.up.railway.app",
+        // theme: "light" | "dark",
 
-    // Custom styling to apply to the widget button
-    button: {
-      // ID of the container element to mount the button to
-      containerId: "copilot-chatbot",
-      // URL of the image to use as the button icon
-      imageUrl: "/assets/copilot-icon.png",
-      // The tailwind classname to apply to the button
-      className: "px-0 py-0 [&_svg]:size-1 bg-transparent hover:bg-transparent"
-    }
-  });
+        // Custom styling to apply to the widget button
+        button: {
+            // ID of the container element to mount the button to
+            containerId: "copilot-chatbot",
+            // URL of the image to use as the button icon
+            imageUrl: "/assets/copilot-icon.png",
+            // The tailwind classname to apply to the button
+            className:
+                "px-0 py-0 [&_svg]:size-1 bg-transparent hover:bg-transparent",
+        },
+    });
 } catch (error) {
-  console.log("Error occured while mounting Chainlit widget", error);
+    console.log("Error occured while mounting Chainlit widget", error);
 }
 
-
-
-
 // Initialize AOS animation library
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
     AOS.init({
         duration: 1000,
         once: true,
-        mirror: false
+        mirror: false,
     });
 
     // Mobile Navigation Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
 
     if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
         });
     }
 
     // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-links li a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
+    document.querySelectorAll(".nav-links li a").forEach((link) => {
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("active");
         });
     });
 
     // Typing Animation
-    const typingText = document.getElementById('typing-text');
+    const typingText = document.getElementById("typing-text");
     const phrases = [
         "Hello, my name is Muskan",
         "I am a frontend developer",
         "I am a web developer",
-        "I specialize in AI & Cloud"
+        "I specialize in AI & Cloud",
     ];
 
     let phraseIndex = 0;
@@ -99,45 +97,46 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Animate skill bars when they come into view
-    const skillBars = document.querySelectorAll('.skill-progress');
+    const skillBars = document.querySelectorAll(".skill-progress");
 
     const animateSkillBars = () => {
-        skillBars.forEach(bar => {
+        skillBars.forEach((bar) => {
             const rect = bar.getBoundingClientRect();
-            const isVisible = (rect.top <= window.innerHeight && rect.bottom >= 0);
+            const isVisible =
+                rect.top <= window.innerHeight && rect.bottom >= 0;
 
             if (isVisible) {
-                const width = bar.getAttribute('data-percent');
+                const width = bar.getAttribute("data-percent");
                 bar.style.width = width;
             }
         });
     };
 
-    window.addEventListener('scroll', animateSkillBars);
+    window.addEventListener("scroll", animateSkillBars);
     animateSkillBars(); // Initial check
 
     // Scroll to top button
-    const scrollToTopBtn = document.getElementById('scrollToTop');
+    const scrollToTopBtn = document.getElementById("scrollToTop");
 
     if (scrollToTopBtn) {
-        window.addEventListener('scroll', () => {
+        window.addEventListener("scroll", () => {
             if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.add('visible');
+                scrollToTopBtn.classList.add("visible");
             } else {
-                scrollToTopBtn.classList.remove('visible');
+                scrollToTopBtn.classList.remove("visible");
             }
         });
 
-        scrollToTopBtn.addEventListener('click', () => {
+        scrollToTopBtn.addEventListener("click", () => {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth'
+                behavior: "smooth",
             });
         });
     }
 
     // Form validation
-    const contactForm = document.getElementById('contactForm');
+    const contactForm = document.getElementById("contactForm");
 
     if (contactForm) {
         contactForm.addEventListener("submit", function (e) {
@@ -198,9 +197,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        Accept: "application/json"
+                        Accept: "application/json",
                     },
-                    body: json
+                    body: json,
                 }).then(async (response) => {
                     let json = await response.json();
                     if (response.status == 200) {
@@ -225,28 +224,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Theme toggle
-    const themeSwitch = document.getElementById('theme-switch');
+    const themeSwitch = document.getElementById("theme-switch");
 
     if (themeSwitch) {
         // Check for saved theme preference or prefer-color-scheme
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        const savedTheme = localStorage.getItem('theme');
+        const prefersDarkScheme = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        );
+        const savedTheme = localStorage.getItem("theme");
 
-        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-            document.body.classList.add('dark-theme');
+        if (
+            savedTheme === "dark" ||
+            (!savedTheme && prefersDarkScheme.matches)
+        ) {
+            document.body.classList.add("dark-theme");
             themeSwitch.checked = true;
-
         }
 
-        themeSwitch.addEventListener('change', function () {
+        themeSwitch.addEventListener("change", function () {
             if (this.checked) {
-                document.body.classList.add('dark-theme');
-                localStorage.setItem('theme', 'dark');
-
+                document.body.classList.add("dark-theme");
+                localStorage.setItem("theme", "dark");
             } else {
-                document.body.classList.remove('dark-theme');
-                localStorage.setItem('theme', 'light');
-
+                document.body.classList.remove("dark-theme");
+                localStorage.setItem("theme", "light");
             }
         });
     }
